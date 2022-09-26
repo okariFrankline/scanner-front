@@ -10,6 +10,9 @@ export default function Home() {
 
   const getStatus = async () => {
     setLoading(true);
+    
+    setError('');
+    setStatus('');
 
     const { success, errors, data } = await performGet('/transactions/status', { tx_hash: txHash });
 

@@ -42,7 +42,7 @@ const performGet = async (path, params) => {
       return { ...res, success: false, errors: 'unexpected error occurred' };
     }
 
-    return { ...res, success: false, errors: error.response.data.details };
+    return { ...res, success: false, errors: error.response.data.error };
   }
 };
 
